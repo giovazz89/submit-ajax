@@ -1,10 +1,10 @@
 // Manage submitting ajax requests
-// applicable to froms and links (<form> and <a>)
+// applicable to forms and links (<form> and <a>)
 // no files
 // send specified fields passing parameter fiedsToSend
 
 // USES BOOTSRTAP MODAL MANAGER
-// USES FROM VALIDATION CLIENT if has class validate or validate-only
+// USES FORM VALIDATION CLIENT if has class validate or validate-only
 
 (function ($) {
     $.fn.submitAjax.options = {
@@ -42,8 +42,10 @@
                     ajaxUrl = element.attr('href');
 
                 var ajaxMethod = 'get';
-                if (element.attr('method') != undefined) 
-                    ajaxMethod = element.attr('method');
+                //if (element.attr('method') != undefined) 
+                //    ajaxMethod = element.attr('method');
+                if(element.closest('*[method]').size() > 0)
+                	ajaxMethod = element.closest('*[method]').attr('method');
 
                 var ajaxData = {}
                 if (element.prop('tagName') == 'FORM') 
@@ -91,7 +93,7 @@
     $.fn.submitAjax.manageResponse = function(result, element) {
         var opt = $.fn.hilight.defaults;
         if(result == '') return;
-        if (element == undefined) 
+        if(element == undefined) 
             element = $('<a></a>');
         try {
             result = eval('(' + result + ')');
