@@ -3,9 +3,6 @@
 // no files
 // send specified fields passing parameter fiedsToSend
 
-// USES BOOTSRTAP MODAL MANAGER
-// USES FORM VALIDATION CLIENT if has class validate or validate-only
-
 (function ($) {
     $.fn.submitAjax.options = {
         'errorClass': 'has-error',
@@ -54,14 +51,14 @@
                     ajaxData = element.attr('name') + '=' + element.val();
 
                 if (fields.size() > 0) {
-                    if (validateFields(fields)) {
+                    //if (validateFields(fields)) {
                         ajaxData = '';
                         fields.each(function () {
                             ajaxData += '&' + $(this).attr('name') + '=' + $(this).val();
                         });
                         ajaxData = ajaxData.substr(1);
-                    }
-                    else return false;
+                    //}
+                    //else return false;
                 }
 
                 // ADD CODE - loading feedback
