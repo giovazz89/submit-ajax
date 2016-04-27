@@ -4,13 +4,6 @@
 // send specified fields passing parameter fiedsToSend
 
 (function ($) {
-    $.fn.submitAjax.options = {
-        'errorClass': 'has-error',
-        'successClass': 'has-success',
-        'classesToClean': ['has-warning', 'has-info'],
-        'applyStatusAt': '.form-group'
-    }
-
     $.fn.submitAjax = function (fieldsToSend) {
         $(this).each(function () {
             var fields = $(fieldsToSend);
@@ -95,7 +88,7 @@
         try {
             result = eval('(' + result + ')');
         } catch (error) {
-            console.error({'SubmitAjax Error', result});
+            console.error({'SubmitAjax Error': result});
         }
 
         $.each(result, function(actionName, action){
@@ -202,6 +195,13 @@
         });
 
         return result;
+    }
+
+    $.fn.submitAjax.options = {
+        'errorClass': 'has-error',
+        'successClass': 'has-success',
+        'classesToClean': ['has-warning', 'has-info'],
+        'applyStatusAt': '.form-group'
     }
 
 
