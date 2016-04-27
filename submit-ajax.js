@@ -21,7 +21,7 @@
                 });
 
             function sendAjax(element) {
-                var opt = $.fn.hilight.defaults;
+                var opt = $.fn.submitAjax.options;
                 element.find(opt['applyStatusAt']).removeClass(opt['errorClass'] + ' ' + opt['successClass'] + ' ' + opt['classesToClean'].join(' '));
                 element.find(opt['applyStatusAt'] + ' *[name]').tooltip('destroy');
 
@@ -81,7 +81,7 @@
 
 
     $.fn.submitAjax.manageResponse = function(result, element) {
-        var opt = $.fn.hilight.defaults;
+        var opt = $.fn.submitAjax.options;
         if(result == '') return;
         if(element == undefined) 
             element = $('<a></a>');
@@ -209,7 +209,7 @@
         resetFields(form.find('input:not([type=submit], [type=hidden]), select, textarea'));
     }
     function resetFields(fields) {
-        var opt = $.fn.hilight.defaults;
+        var opt = $.fn.submitAjax.options;
         fields.each(function () {
             $(this).val('');
             $(this).tooltip('destroy');
