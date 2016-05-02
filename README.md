@@ -7,12 +7,16 @@ Ajax management JQuery plugin (init for bootstrap, but customizable)
 
 Submit Ajax can be used on any FORM, INPUT or A element that generates respectively a SUBMIT, CHANGE or CLICK event.
 
-<pre><code>$('element_to_submit_selector').submitAjax();</code></pre>
+```
+$('element_to_submit_selector').submitAjax();
+```
 
 OR
 
-```$('element_to_submit_selector').submitAjax('fields_to_send_on_action_selector');
-// the fields to send selector gets the choosen fields and sends only them</code>```
+```
+$('element_to_submit_selector').submitAjax('fields_to_send_on_action_selector');
+// the fields to send selector gets the choosen fields and sends only them</code>
+```
 
 
 ### Notes
@@ -52,9 +56,11 @@ The JSON response can contain as much of the following elements as needed
 
 ### Defaults
 
-```$.fn.submitAjax.options = {
+```
+$.fn.submitAjax.options = {
         'errorClass': 'has-error',  // class applied to form elements with errors
         'successClass': 'has-success',  // success class applied to form elements
         'classesToClean': ['has-warning', 'has-info'],  // additional classes to remove at every form submit
         'applyStatusAt': '.form-group'  // ancestor selector to which you are assigned the classes
-    }```
+    }
+```
