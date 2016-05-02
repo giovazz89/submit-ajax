@@ -20,6 +20,7 @@ OR
 File support (multipart/form-data) is not implemented completely yet!
 
 Uses jQuery
+
 Uses bootstrap .tooltip() function in form validation
 
 
