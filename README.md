@@ -3,7 +3,7 @@ submit-ajax
 
 Ajax management JQuery plugin (init for bootstrap, but customizable)
 
-<h3>Usage</h3>
+### Usage
 
 Submit Ajax can be used on any FORM, INPUT or A element that generates respectively a SUBMIT, CHANGE or CLICK event.
 
@@ -11,11 +11,11 @@ Submit Ajax can be used on any FORM, INPUT or A element that generates respectiv
 
 OR
 
-<pre><code>$('element_to_submit_selector').submitAjax('fields_to_send_on_action_selector');
-// the fields to send selector gets the choosen fields and sends only them</code></pre>
+```$('element_to_submit_selector').submitAjax('fields_to_send_on_action_selector');
+// the fields to send selector gets the choosen fields and sends only them</code>```
 
 
-<h3>Notes</h3>
+### Notes
 
 File support (multipart/form-data) is not implemented completely yet!
 
@@ -24,7 +24,7 @@ Uses jQuery
 Uses bootstrap .tooltip() function in form validation
 
 
-<h3>Response structure</h3>
+### Response structure
 
 The JSON response can contain as much of the following elements as needed
 
@@ -48,3 +48,13 @@ The JSON response can contain as much of the following elements as needed
 |"replace": "HTML to insert"|replace-to="jQuery selector"|replaces the specified element with given HTML|
 |"run": "code"|-|Run the javascript code specified in the string|
 |"reset-form": ""|-|Resets all fields in the sending FORM|
+
+
+### Defaults
+
+```$.fn.submitAjax.options = {
+        'errorClass': 'has-error',  // class applied to form elements with errors
+        'successClass': 'has-success',  // success class applied to form elements
+        'classesToClean': ['has-warning', 'has-info'],  // additional classes to remove at every form submit
+        'applyStatusAt': '.form-group'  // ancestor selector to which you are assigned the classes
+    }```
