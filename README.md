@@ -9,9 +9,8 @@ Ajax management JQuery plugin (init for bootstrap, but customizable)
 
 OR
 
-<pre><code>$('element_to_submit_selector').submitAjax('additional_fields_selector');
-// the additioan fields select the choosen fields and sends them 
-// with the fields in the submitted element</code></pre>
+<pre><code>$('element_to_submit_selector').submitAjax('fields_to_send_on_action_selector');
+// the fields to send selector gets the choosen fields and sends only them</code></pre>
 
 
 <h3>notes</h3>
