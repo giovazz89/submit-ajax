@@ -60,7 +60,7 @@ The JSON response can contain as much of the following elements as needed
 $.fn.submitAjax.options = {
         'errorClass': 'has-error',  // class applied to form elements with errors
         'successClass': 'has-success',  // success class applied to form elements
-        'classesToClean': ['has-warning', 'has-info'],  // additional classes to remove at every form submit
+        'classesToClean': ['has-warning', 'has-info'],  // additional classes to remove at every form submission
         'applyStatusAt': '.form-group'  // ancestor selector to which you are assigned the classes
     }
 ```
