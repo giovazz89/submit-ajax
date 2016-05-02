@@ -3,7 +3,7 @@ submit-ajax
 
 Ajax management JQuery plugin (init for bootstrap, but customizable)
 
-<h3>usage</h3>
+<h3>Usage</h3>
 
 Submit Ajax can be used on any FORM, INPUT or A element that generates respectively a SUBMIT, CHANGE or CLICK event.
 
@@ -15,7 +15,7 @@ OR
 // the fields to send selector gets the choosen fields and sends only them</code></pre>
 
 
-<h3>notes</h3>
+<h3>Notes</h3>
 
 File support (multipart/form-data) is not implemented completely yet!
 
