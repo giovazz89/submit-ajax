@@ -5,6 +5,8 @@ Ajax management JQuery plugin (init for bootstrap, but customizable)
 
 <h3>usage</h3>
 
+Submit Ajax can be used on any FORM, INPUT or A element that generates respectively a SUBMIT, CHANGE or CLICK event.
+
 <pre><code>$('element_to_submit_selector').submitAjax();</code></pre>
 
 OR
