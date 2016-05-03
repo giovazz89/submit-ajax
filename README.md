@@ -7,7 +7,7 @@ Ajax management JQuery plugin (init for bootstrap, but customizable)
 
 Submit Ajax can be used on any FORM, INPUT or A element that generates respectively a SUBMIT, CHANGE or CLICK event.
 
-Use the 'disabled' attribute to prevent from sending.
+Use the 'disabled' HTML attribute in the element to prevent submit-ajax from sending.
 
 ```
 $('element_to_submit_selector').submitAjax();
