@@ -9,14 +9,17 @@
             var fields = $(fieldsToSend);
             if (this.tagName == 'FORM')
                 $(this).submit(function () {
+                    if($(this)[0].hasAttribute('disabled')) return;
                     return sendAjax($(this));
                 });
             if (this.tagName == 'A')
                 $(this).click(function () {
+                    if($(this)[0].hasAttribute('disabled')) return;
                     return sendAjax($(this));
                 });
             if (this.tagName == 'INPUT')
                 $(this).change(function () {
+                    if($(this)[0].hasAttribute('disabled')) return;
                     return sendAjax($(this));
                 });
 
