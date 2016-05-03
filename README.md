@@ -6,6 +6,7 @@ Ajax management JQuery plugin (init for bootstrap, but customizable)
 ### Usage
 
 Submit Ajax can be used on any FORM, INPUT or A element that generates respectively a SUBMIT, CHANGE or CLICK event.
+
 Use the 'disabled' attribute to prevent from sending.
 
 ```
